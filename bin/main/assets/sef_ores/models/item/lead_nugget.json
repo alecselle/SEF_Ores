@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "sef_ores:item/lead_nugget"
+    }
+}

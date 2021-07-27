@@ -1,0 +1,107 @@
+plugins {
+	id 'fabric-loom' version '0.8-SNAPSHOT'
+	id 'maven-publish'
+	id "com.matthewprenger.cursegradle" version "1.4.0"
+}
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
+
+archivesBaseName = project.archives_base_name
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+	maven { 
+		url 'https://jitpack.io' 
+		}
+	maven { 
+		url "https://maven.jamieswhiteshirt.com/libs-release/" 
+		}
+	maven { 
+		name "Cloth Config"
+		url "https://maven.shedaniel.me/" 
+		}
+	maven { 
+		name "Mod Menu"
+		url "https://maven.terraformersmc.com/" 
+		}
+	maven { 
+		url "https://www.cursemaven.com" 
+		}
+	maven {
+        name "Nbt Crafting"
+        url "https://maven.siphalor.de"
+    }
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+	
+	// Config
+	modImplementation("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+    	exclude(group: "net.fabricmc.fabric-api")
+  	}
+
+	// Modmenu
+	modImplementation("com.terraformersmc:modmenu:${project.mod_menu_version}"),{
+		exclude(group: "net.fabricmc.fabric-api")
+	}
+
+	// NbtCrafting
+	modImplementation "de.siphalor:nbtcrafting-1.17:2+"
+
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	filesMatching("fabric.mod.json") {
+		expand "version": project.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.encoding = "UTF-8"
+	it.options.release = 16
+}
+
+java {
+	withSourcesJar()
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}"}
+	}
+}
+
+def localProperties = new Properties()
+localProperties.load(new FileInputStream(rootProject.file("local.properties")))
+
+curseforge {
+	apiKey = "${localProperties.curseForgeApiKey}"
+	project {
+		id = "${project.curseForgeProjectId}"
+		releaseType = 'release'
+		addGameVersion '1.17.1'
+
+		mainArtifact(remapJar) {
+			displayName = "sef_ores-${project.version}"
+			relations {
+				requiredDependency "modmenu"
+				requiredDependency "nbt-crafting"
+				requiredDependency "cloth-config"
+			}
+
+		}
+	}
+	options {
+    	forgeGradleIntegration = false
+  	}
+}

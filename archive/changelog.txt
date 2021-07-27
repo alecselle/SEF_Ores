@@ -1,0 +1,21 @@
+==================================================
+Version: 0.6.0
+Date: 07/27/2021
+Notes:
+	- Fixed Mod Menu integration
+	- Added Conversion Guide
+		- Allows converting any other mod's materials that are included
+		- Craft with a book and iron ingot
+==================================================
+Version: 0.5.0
+Date: 07/26/2021
+Notes:
+	- Added aluminum, bronze, lead, nickel, steel, tin, titanium, and zinc
+	- Changed chromium textures
+	- Switched to dynamic recipe generation
+	- Configurable ore generation - but Mod Menuis currently not working :/
+==================================================
+Version: 0.0.1
+Date: 07/25/2021
+Notes:
+	- Added chromium ore/raw/ingot

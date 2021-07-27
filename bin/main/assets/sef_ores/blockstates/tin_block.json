@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "sef_ores:block/tin_block" }
+    }
+}
