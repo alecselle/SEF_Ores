@@ -29,6 +29,11 @@ public class ModInit {
 
 	public static final ConversionManual CONVERSION_MANUAL = new ConversionManual(new Settings().group(Group.SEF_ORES).maxCount(1));
 
+	public static final Item IRON_DUST = new Item(new Settings().group(Group.SEF_ORES));
+	public static final Item GOLD_DUST = new Item(new Settings().group(Group.SEF_ORES));
+	public static final Item COPPER_DUST = new Item(new Settings().group(Group.SEF_ORES));
+	public static final Item COPPER_NUGGET = new Item(new Settings().group(Group.SEF_ORES));
+
 	public static final Map<String, Material> MATERIALS = Map.ofEntries(
 	//													|name					|name			|hardness	|pick	|has ores
 	//	new AbstractMap.SimpleEntry<String, Material>(	"", 		new Material("", 			0.0f, 		0, 		true)),
@@ -197,9 +202,39 @@ public class ModInit {
 		}
 	}
 
+	public void initVanilla() {
+
+	}
+
 	public static void init() {
 		initOres();
 		initWorldGen();
+		item("iron_dust", IRON_DUST);
+		item("gold_dust", GOLD_DUST);
+		item("copper_dust", COPPER_DUST);
+		item("copper_nugget", COPPER_NUGGET);
+
+		ArrayList<Character> keys = new ArrayList<Character>();
+		ArrayList<Identifier> items = new ArrayList<Identifier>();
+		ArrayList<String> type = new ArrayList<String>();
+		ArrayList<String> pattern = new ArrayList<String>();
+		
+		keys.add('X');
+		items.add(new Identifier("c", "copper_nuggets"));
+		type.add("tag");
+		pattern.add("XXX");
+		pattern.add("XXX");
+		pattern.add("XXX");
+
+		RECIPES.add(RecipeBuilder.createShaped(keys, items, type, pattern, new Identifier(ModInit.MOD_ID+":copper_ingot"), 1));
+
+		ArrayList<Identifier> items = new ArrayList<Identifier>();
+		ArrayList<String> type = new ArrayList<String>();
+		items.add(new Identifier("c", "copper_ingot"));
+		type.add("tag");
+
+		RECIPES.add(RecipeBuilder.createShapeless(items, type, new Identifier(ModInit.MOD_ID+":"+id+"_ingot"), 9));
+
 		if (SEFOres.CONFIG.conversion_manual) {
 			item("conversion_manual", CONVERSION_MANUAL);
 

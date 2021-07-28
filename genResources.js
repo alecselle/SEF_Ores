@@ -73,6 +73,23 @@ function tagJson(material, type) {
 	}`
 }
 
+function tagVanillaJson(material, type) {
+    if (type == "raw") return `
+	{
+		"replace": false,
+		"values": [
+			"minecraft:` + type + `_` + material + `"
+		]
+	}`
+    return `
+	{
+		"replace": false,
+		"values": [
+			"minecraft:` + material + `_` + type + `"
+		]
+	}`
+}
+
 function loot_tableJson(material) {
     return `
 	{
@@ -209,11 +226,33 @@ function genTag(material, type) {
     }
 }
 
-function genTagVanilla(material, type) {
-    fs.writeFile(TAG_PATH + material + "_" + type + "s.json", tagJson(material, type), function(err) {
-        if (err) throw err;
-        console.log("Tag created: " + material + "_" + type + "s");
-    });
+function genTagVanilla(material, type, newItem = true) {
+    if (type == "raw") {
+        if (newItem) {
+            fs.writeFile(TAG_PATH + type + "_" + material + "_ores.json", tagJson(material, type), function(err) {
+                if (err) throw err;
+                console.log("Tag created: " + material + "_" + type + "s");
+            });
+        } else {
+            fs.writeFile(TAG_PATH + type + "_" + material + "_ores.json", tagVanillaJson(material, type), function(err) {
+                if (err) throw err;
+                console.log("Tag created: " + material + "_" + type + "s");
+            });
+        }
+    } else {
+        if (newItem) {
+            fs.writeFile(TAG_PATH + material + "_" + type + "s.json", tagJson(material, type), function(err) {
+                if (err) throw err;
+                console.log("Tag created: " + material + "_" + type + "s");
+            });
+        } else {
+            fs.writeFile(TAG_PATH + material + "_" + type + "s.json", tagVanillaJson(material, type), function(err) {
+                if (err) throw err;
+                console.log("Tag created: " + material + "_" + type + "s");
+            });
+        }
+    }
+
 }
 
 function genTags(material, alloy = false) {
@@ -228,8 +267,16 @@ function genTags(material, alloy = false) {
 }
 
 function genTagsVanilla(material) {
-    if (material != "gold" && material != "iron") genTag(material, "nugget");
-    genTag(material, "dust");
+    genTagVanilla(material, "ore", false);
+    genTagVanilla(material, "raw", false);
+    genTagVanilla(material, "ingot", false);
+    if (material != "gold" && material != "iron") {
+        genTagVanilla(material, "nugget", true);
+    } else {
+        genTagVanilla(material, "nugget", false);
+    }
+    genTagVanilla(material, "block", false);
+    genTagVanilla(material, "dust", true);
 }
 
 // Append to json (ore, block, raw, nugget, ingot, dust)
