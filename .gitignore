@@ -5,6 +5,7 @@
 local.properties
 /build/
 /run/
+/bin/
 gradle-app.setting
 !gradle-wrapper.jar
 .gradletasknamecache
