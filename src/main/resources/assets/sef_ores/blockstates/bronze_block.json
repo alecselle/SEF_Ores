@@ -1,5 +1,6 @@
-{
-    "variants": {
-        "": { "model": "sef_ores:block/bronze_block" }
-    }
-}
+
+	{
+    	"variants": {
+        	"": { "model": "sef_ores:block/bronze_block" }
+    	}
+	}

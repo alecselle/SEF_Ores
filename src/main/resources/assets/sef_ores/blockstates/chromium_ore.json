@@ -1,5 +1,6 @@
-{
-    "variants": {
-        "": { "model": "sef_ores:block/chromium_ore" }
-    }
-}
+
+	{
+    	"variants": {
+        	"": { "model": "sef_ores:block/chromium_ore" }
+    	}
+	}

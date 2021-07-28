@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:lead_block"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:lead_block"
+		]
+	}

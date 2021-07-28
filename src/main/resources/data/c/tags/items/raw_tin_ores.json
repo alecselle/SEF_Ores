@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:raw_tin"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:raw_tin"
+		]
+	}

@@ -1,5 +1,6 @@
-{
-    "variants": {
-        "": { "model": "sef_ores:block/lead_ore" }
-    }
-}
+
+	{
+    	"variants": {
+        	"": { "model": "sef_ores:block/lead_ore" }
+    	}
+	}

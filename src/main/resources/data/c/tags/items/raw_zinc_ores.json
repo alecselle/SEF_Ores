@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:raw_zinc"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:raw_zinc"
+		]
+	}

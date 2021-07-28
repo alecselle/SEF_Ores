@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:bronze_ingot"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:bronze_ingot"
+		]
+	}

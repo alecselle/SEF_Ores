@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:tin_block"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:tin_block"
+		]
+	}

@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:titanium_ore"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:titanium_ore"
+		]
+	}

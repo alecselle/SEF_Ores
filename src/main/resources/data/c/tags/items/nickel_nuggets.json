@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:nickel_ingot"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:nickel_nugget"
+		]
+	}

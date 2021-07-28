@@ -1,6 +1,4 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "sef_ores:block/tin_block"
-    }
-}
+
+	{
+		"parent": "sef_ores:block/tin_block"
+	}

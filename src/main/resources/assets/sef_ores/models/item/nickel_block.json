@@ -1,3 +1,4 @@
-{
-    "parent": "sef_ores:block/nickel_block"
-}
+
+	{
+		"parent": "sef_ores:block/nickel_block"
+	}

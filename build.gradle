@@ -88,8 +88,8 @@ curseforge {
 	apiKey = "${localProperties.curseForgeApiKey}"
 	project {
 		id = "${project.curseForgeProjectId}"
-		releaseType = "release"
-		addGameVersion "${project.1.17.1}"
+		releaseType = 'release'
+		addGameVersion "${project.minecraft_version}"
 		addGameVersion "Java 16"
 		addGameVersion "Fabric"
 

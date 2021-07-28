@@ -1,6 +1,7 @@
-{
-    "replace": false,
-    "values": [
-        "sef_ores:zinc_block"
-    ]
-}
+
+	{
+		"replace": false,
+		"values": [
+			"sef_ores:zinc_block"
+		]
+	}

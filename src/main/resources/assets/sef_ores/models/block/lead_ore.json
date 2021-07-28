@@ -1,6 +1,4 @@
-{
-    "parent": "block/cube_all",
-    "textures": {
-        "all": "sef_ores:block/lead_ore"
-    }
-}
+
+	{
+		"parent": "sef_ores:block/lead_ore"
+	}
