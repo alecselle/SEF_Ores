@@ -33,7 +33,7 @@ public class ModInit {
 	//													|name					|name			|hardness	|pick	|has ores
 	//	new AbstractMap.SimpleEntry<String, Material>(	"", 		new Material("", 			0.0f, 		0, 		true)),
 		new AbstractMap.SimpleEntry<String, Material>(	"aluminum", new Material("aluminum", 	2.5f, 		1, 		true)),
-		new AbstractMap.SimpleEntry<String, Material>(	"brass", 	new Material("brass", 		2.8f, 		2, 		true)),
+		new AbstractMap.SimpleEntry<String, Material>(	"brass", 	new Material("brass", 		2.8f, 		2, 		false)),
 		new AbstractMap.SimpleEntry<String, Material>(	"bronze", 	new Material("bronze", 		4.0f, 		2, 		false)),
 		new AbstractMap.SimpleEntry<String, Material>(	"chromium", new Material("chromium", 	4.0f, 		2, 		true)),
 		new AbstractMap.SimpleEntry<String, Material>(	"electrum", new Material("electrum", 	4.0f, 		2, 		false)),

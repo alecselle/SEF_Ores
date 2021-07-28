@@ -27,6 +27,7 @@ public class Material {
 	public Item INGOT;
 	public Item NUGGET;
 	public Block BLOCK;
+	public Item DUST;
 	public String TAG;
 
 	public Material(String id, float hardness, int pickRequired) {
@@ -51,6 +52,7 @@ public class Material {
 		INGOT = new Item(new FabricItemSettings().group(Group.SEF_ORES));
 		NUGGET = new Item(new FabricItemSettings().group(Group.SEF_ORES));
 		BLOCK = new Block(FabricBlockSettings.of(net.minecraft.block.Material.METAL).strength(hardness).requiresTool().breakByTool(FabricToolTags.PICKAXES, pickRequired));
+		DUST = new Item(new FabricItemSettings().group(Group.SEF_ORES));
 	}
 
 	private JsonObject nuggetToIngot() {
@@ -143,6 +145,10 @@ public class Material {
 		return RecipeBuilder.createConversion(new Identifier("c", id+"_nuggets"), new Identifier("sef_ores", "conversion_manual"), new Identifier(ModInit.MOD_ID+":"+id+"_nugget"));
 	}
 
+	private JsonObject dustConversion() {
+		return RecipeBuilder.createConversion(new Identifier("c", id+"_dusts"), new Identifier("sef_ores", "conversion_manual"), new Identifier(ModInit.MOD_ID+":"+id+"_dust"));
+	}
+
 
 	public ArrayList<JsonObject> recipes() {
 		ArrayList<JsonObject> list = new ArrayList<JsonObject>();
@@ -165,6 +171,7 @@ public class Material {
 			list.add(blockConversion());
 			list.add(blockAltConversion());
 			list.add(nuggetConversion());
+			list.add(dustConversion());
 		}
 		return list;
 	}
@@ -178,6 +185,7 @@ public class Material {
 		}
 		ModInit.item(id+"_ingot", INGOT);
 		ModInit.item(id+"_nugget", NUGGET);
+		ModInit.item(id+"_dust", DUST);
 		ModInit.block(id+"_block", BLOCK);
 		ModInit.blockItem(id+"_block", BLOCK, Group.SEF_ORES);
 	}

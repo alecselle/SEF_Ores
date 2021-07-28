@@ -37,8 +37,11 @@ function itemModelJson(material, type) {
 function blockModelJson(material, type) {
     return `
 	{
-		"parent": "sef_ores:block/` + material + `_` + type + `"
-	}`
+		"parent": "block/cube_all",
+		"textures": {
+			"all": "sef_ores:block/` + material + `_` + type + `"
+		}
+	} `
 }
 
 function blockItemModelJson(material, type) {
@@ -209,11 +212,11 @@ function genLang(material, type) {
     let raw = fs.readFileSync(LANG_PATH);
     let json = JSON.parse(raw);
     if (type == "block" || type == "ore") {
-        if (!json.hasOwnProperty("block.sef_ores." + type + "_" + material)) {
-            json["block.sef_ores." + type + "_" + material] = capitalize(type) + " " + capitalize(material);
+        if (!json.hasOwnProperty("block.sef_ores." + material + "_" + type)) {
+            json["block.sef_ores." + material + "_" + type] = capitalize(material) + " " + capitalize(type);
         }
-        if (!json.hasOwnProperty("item.sef_ores." + type + "_" + material)) {
-            json["item.sef_ores." + type + "_" + material] = capitalize(type) + " " + capitalize(material);
+        if (!json.hasOwnProperty("item.sef_ores." + material + "_" + type)) {
+            json["item.sef_ores." + material + "_" + type] = capitalize(material) + " " + capitalize(type);
         }
     } else if (type == "raw") {
         if (!json.hasOwnProperty("item.sef_ores." + type + "_" + material)) {
@@ -237,8 +240,8 @@ function genGenerationLangs(material) {
     if (!json.hasOwnProperty("text.autoconfig.sef_ores.option." + material + "_vein_size")) {
         json["text.autoconfig.sef_ores.option." + material + "_vein_size"] = capitalize(material) + " Vein Size";
     }
-    if (!json.hasOwnProperty("text.autoconfig.sef_ores.option." + material + "_vein_size")) {
-        json["text.autoconfig.sef_ores.option." + material + "_vein_size"] = capitalize(material) + " Vein Frequency";
+    if (!json.hasOwnProperty("text.autoconfig.sef_ores.option." + material + "_vein_frequency")) {
+        json["text.autoconfig.sef_ores.option." + material + "_vein_frequency"] = capitalize(material) + " Vein Frequency";
     }
     if (!json.hasOwnProperty("text.autoconfig.sef_ores.option." + material + "_min_y")) {
         json["text.autoconfig.sef_ores.option." + material + "_min_y"] = capitalize(material) + " Min Y";
