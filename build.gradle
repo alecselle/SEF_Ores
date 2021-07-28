@@ -88,8 +88,10 @@ curseforge {
 	apiKey = "${localProperties.curseForgeApiKey}"
 	project {
 		id = "${project.curseForgeProjectId}"
-		releaseType = 'release'
-		addGameVersion '1.17.1'
+		releaseType = "release"
+		addGameVersion "${project.1.17.1}"
+		addGameVersion "Java 16"
+		addGameVersion "Fabric"
 
 		mainArtifact(remapJar) {
 			displayName = "sef_ores-${project.version}"
