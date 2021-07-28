@@ -1,356 +1,364 @@
 {
 
-    "text.autoconfig.sef_ores.title": "SEF Ores",
+"text.autoconfig.sef_ores.title": "SEF Ores",
 
-    "text.autoconfig.sef_ores.category.default": "Default Settings",
+"text.autoconfig.sef_ores.category.default": "Default Settings",
 
-    "text.autoconfig.sef_ores.category.items": "Item Settings",
+"text.autoconfig.sef_ores.category.items": "Item Settings",
 
-    "text.autoconfig.sef_ores.category.recipes": "Recipe Settings",
+"text.autoconfig.sef_ores.category.recipes": "Recipe Settings",
 
-    "text.autoconfig.sef_ores.category.worldgen": "World Gen Settings",
+"text.autoconfig.sef_ores.category.worldgen": "World Gen Settings",
 
-    "item.sef_ores.conversion_manual": "Conversion Manual",
+"item.sef_ores.conversion_manual": "Conversion Manual",
 
-    "item.sef_ores.conversion_manual.tooltip": "Use in crafting table to convert materials",
+"item.sef_ores.conversion_manual.tooltip": "Use in crafting table to convert materials",
 
-    "text.autoconfig.sef_ores.option.conversion_manual": "Enable Conversion Manual",
+"text.autoconfig.sef_ores.option.conversion_manual": "Enable Conversion Manual",
 
-    "itemGroup.sef_ores.sef_ores_group": "SEF Ores",
+"itemGroup.sef_ores.sef_ores_group": "SEF Ores",
 
-    "block.sef_ores.aluminum_ore": "Aluminum Ore",
+"item.sef_ores.iron_dust": "Iron Dust",
 
-    "item.sef_ores.aluminum_ore": "Aluminum Ore",
+"item.sef_ores.gold_dust": "Gold Dust",
 
-    "item.sef_ores.raw_aluminum": "Raw Aluminum",
+"item.sef_ores.copper_nugget": "Copper Nugget",
 
-    "item.sef_ores.aluminum_ingot": "Aluminum Ingot",
+"item.sef_ores.copper_dust": "Copper Dust",
 
-    "item.sef_ores.aluminum_nugget": "Aluminum Nugget",
+"block.sef_ores.aluminum_ore": "Aluminum Ore",
 
-    "block.sef_ores.aluminum_block": "Aluminum Block",
+"item.sef_ores.aluminum_ore": "Aluminum Ore",
 
-    "item.sef_ores.aluminum_block": "Aluminum Block",
+"item.sef_ores.raw_aluminum": "Raw Aluminum",
 
-    "item.sef_ores.aluminum_dust": "Aluminum Dust",
+"item.sef_ores.aluminum_ingot": "Aluminum Ingot",
 
-    "text.autoconfig.sef_ores.option.aluminum": "Generate Aluminum",
+"item.sef_ores.aluminum_nugget": "Aluminum Nugget",
 
-    "text.autoconfig.sef_ores.option.aluminum_vein_size": "Aluminum Vein Size",
+"block.sef_ores.aluminum_block": "Aluminum Block",
 
-    "text.autoconfig.sef_ores.option.aluminum_vein_frequency": "Aluminum Vein Frequency",
+"item.sef_ores.aluminum_block": "Aluminum Block",
 
-    "text.autoconfig.sef_ores.option.aluminum_min_y": "Aluminum Min Y",
+"item.sef_ores.aluminum_dust": "Aluminum Dust",
 
-    "text.autoconfig.sef_ores.option.aluminum_max_y": "Aluminum Max Y",
+"text.autoconfig.sef_ores.option.aluminum": "Generate Aluminum",
 
-    "block.sef_ores.chromium_ore": "Chromium Ore",
+"text.autoconfig.sef_ores.option.aluminum_vein_size": "Aluminum Vein Size",
 
-    "item.sef_ores.chromium_ore": "Chromium Ore",
+"text.autoconfig.sef_ores.option.aluminum_vein_frequency": "Aluminum Vein Frequency",
 
-    "item.sef_ores.raw_chromium": "Raw Chromium",
+"text.autoconfig.sef_ores.option.aluminum_min_y": "Aluminum Min Y",
 
-    "item.sef_ores.chromium_ingot": "Chromium Ingot",
+"text.autoconfig.sef_ores.option.aluminum_max_y": "Aluminum Max Y",
 
-    "item.sef_ores.chromium_nugget": "Chromium Nugget",
+"block.sef_ores.chromium_ore": "Chromium Ore",
 
-    "block.sef_ores.chromium_block": "Chromium Block",
+"item.sef_ores.chromium_ore": "Chromium Ore",
 
-    "item.sef_ores.chromium_block": "Chromium Block",
+"item.sef_ores.raw_chromium": "Raw Chromium",
 
-    "item.sef_ores.chromium_dust": "Chromium Dust",
+"item.sef_ores.chromium_ingot": "Chromium Ingot",
 
-    "text.autoconfig.sef_ores.option.chromium": "Generate Chromium",
+"item.sef_ores.chromium_nugget": "Chromium Nugget",
 
-    "text.autoconfig.sef_ores.option.chromium_vein_size": "Chromium Vein Size",
+"block.sef_ores.chromium_block": "Chromium Block",
 
-    "text.autoconfig.sef_ores.option.chromium_vein_frequency": "Chromium Vein Frequency",
+"item.sef_ores.chromium_block": "Chromium Block",
 
-    "text.autoconfig.sef_ores.option.chromium_min_y": "Chromium Min Y",
+"item.sef_ores.chromium_dust": "Chromium Dust",
 
-    "text.autoconfig.sef_ores.option.chromium_max_y": "Chromium Max Y",
+"text.autoconfig.sef_ores.option.chromium": "Generate Chromium",
 
-    "block.sef_ores.iridium_ore": "Iridium Ore",
+"text.autoconfig.sef_ores.option.chromium_vein_size": "Chromium Vein Size",
 
-    "item.sef_ores.iridium_ore": "Iridium Ore",
+"text.autoconfig.sef_ores.option.chromium_vein_frequency": "Chromium Vein Frequency",
 
-    "item.sef_ores.raw_iridium": "Raw Iridium",
+"text.autoconfig.sef_ores.option.chromium_min_y": "Chromium Min Y",
 
-    "item.sef_ores.iridium_ingot": "Iridium Ingot",
+"text.autoconfig.sef_ores.option.chromium_max_y": "Chromium Max Y",
 
-    "item.sef_ores.iridium_nugget": "Iridium Nugget",
+"block.sef_ores.iridium_ore": "Iridium Ore",
 
-    "block.sef_ores.iridium_block": "Iridium Block",
+"item.sef_ores.iridium_ore": "Iridium Ore",
 
-    "item.sef_ores.iridium_block": "Iridium Block",
+"item.sef_ores.raw_iridium": "Raw Iridium",
 
-    "item.sef_ores.iridium_dust": "Iridium Dust",
+"item.sef_ores.iridium_ingot": "Iridium Ingot",
 
-    "text.autoconfig.sef_ores.option.iridium": "Generate Iridium",
+"item.sef_ores.iridium_nugget": "Iridium Nugget",
 
-    "text.autoconfig.sef_ores.option.iridium_vein_size": "Iridium Vein Size",
+"block.sef_ores.iridium_block": "Iridium Block",
 
-    "text.autoconfig.sef_ores.option.iridium_vein_frequency": "Iridium Vein Frequency",
+"item.sef_ores.iridium_block": "Iridium Block",
 
-    "text.autoconfig.sef_ores.option.iridium_min_y": "Iridium Min Y",
+"item.sef_ores.iridium_dust": "Iridium Dust",
 
-    "text.autoconfig.sef_ores.option.iridium_max_y": "Iridium Max Y",
+"text.autoconfig.sef_ores.option.iridium": "Generate Iridium",
 
-    "block.sef_ores.lead_ore": "Lead Ore",
+"text.autoconfig.sef_ores.option.iridium_vein_size": "Iridium Vein Size",
 
-    "item.sef_ores.lead_ore": "Lead Ore",
+"text.autoconfig.sef_ores.option.iridium_vein_frequency": "Iridium Vein Frequency",
 
-    "item.sef_ores.raw_lead": "Raw Lead",
+"text.autoconfig.sef_ores.option.iridium_min_y": "Iridium Min Y",
 
-    "item.sef_ores.lead_ingot": "Lead Ingot",
+"text.autoconfig.sef_ores.option.iridium_max_y": "Iridium Max Y",
 
-    "item.sef_ores.lead_nugget": "Lead Nugget",
+"block.sef_ores.lead_ore": "Lead Ore",
 
-    "block.sef_ores.lead_block": "Lead Block",
+"item.sef_ores.lead_ore": "Lead Ore",
 
-    "item.sef_ores.lead_block": "Lead Block",
+"item.sef_ores.raw_lead": "Raw Lead",
 
-    "item.sef_ores.lead_dust": "Lead Dust",
+"item.sef_ores.lead_ingot": "Lead Ingot",
 
-    "text.autoconfig.sef_ores.option.lead": "Generate Lead",
+"item.sef_ores.lead_nugget": "Lead Nugget",
 
-    "text.autoconfig.sef_ores.option.lead_vein_size": "Lead Vein Size",
+"block.sef_ores.lead_block": "Lead Block",
 
-    "text.autoconfig.sef_ores.option.lead_vein_frequency": "Lead Vein Frequency",
+"item.sef_ores.lead_block": "Lead Block",
 
-    "text.autoconfig.sef_ores.option.lead_min_y": "Lead Min Y",
+"item.sef_ores.lead_dust": "Lead Dust",
 
-    "text.autoconfig.sef_ores.option.lead_max_y": "Lead Max Y",
+"text.autoconfig.sef_ores.option.lead": "Generate Lead",
 
-    "block.sef_ores.nickel_ore": "Nickel Ore",
+"text.autoconfig.sef_ores.option.lead_vein_size": "Lead Vein Size",
 
-    "item.sef_ores.nickel_ore": "Nickel Ore",
+"text.autoconfig.sef_ores.option.lead_vein_frequency": "Lead Vein Frequency",
 
-    "item.sef_ores.raw_nickel": "Raw Nickel",
+"text.autoconfig.sef_ores.option.lead_min_y": "Lead Min Y",
 
-    "item.sef_ores.nickel_ingot": "Nickel Ingot",
+"text.autoconfig.sef_ores.option.lead_max_y": "Lead Max Y",
 
-    "item.sef_ores.nickel_nugget": "Nickel Nugget",
+"block.sef_ores.nickel_ore": "Nickel Ore",
 
-    "block.sef_ores.nickel_block": "Nickel Block",
+"item.sef_ores.nickel_ore": "Nickel Ore",
 
-    "item.sef_ores.nickel_block": "Nickel Block",
+"item.sef_ores.raw_nickel": "Raw Nickel",
 
-    "item.sef_ores.nickel_dust": "Nickel Dust",
+"item.sef_ores.nickel_ingot": "Nickel Ingot",
 
-    "text.autoconfig.sef_ores.option.nickel": "Generate Nickel",
+"item.sef_ores.nickel_nugget": "Nickel Nugget",
 
-    "text.autoconfig.sef_ores.option.nickel_vein_size": "Nickel Vein Size",
+"block.sef_ores.nickel_block": "Nickel Block",
 
-    "text.autoconfig.sef_ores.option.nickel_vein_frequency": "Nickel Vein Frequency",
+"item.sef_ores.nickel_block": "Nickel Block",
 
-    "text.autoconfig.sef_ores.option.nickel_min_y": "Nickel Min Y",
+"item.sef_ores.nickel_dust": "Nickel Dust",
 
-    "text.autoconfig.sef_ores.option.nickel_max_y": "Nickel Max Y",
+"text.autoconfig.sef_ores.option.nickel": "Generate Nickel",
 
-    "block.sef_ores.platinum_ore": "Platinum Ore",
+"text.autoconfig.sef_ores.option.nickel_vein_size": "Nickel Vein Size",
 
-    "item.sef_ores.platinum_ore": "Platinum Ore",
+"text.autoconfig.sef_ores.option.nickel_vein_frequency": "Nickel Vein Frequency",
 
-    "item.sef_ores.raw_platinum": "Raw Platinum",
+"text.autoconfig.sef_ores.option.nickel_min_y": "Nickel Min Y",
 
-    "item.sef_ores.platinum_ingot": "Platinum Ingot",
+"text.autoconfig.sef_ores.option.nickel_max_y": "Nickel Max Y",
 
-    "item.sef_ores.platinum_nugget": "Platinum Nugget",
+"block.sef_ores.platinum_ore": "Platinum Ore",
 
-    "block.sef_ores.platinum_block": "Platinum Block",
+"item.sef_ores.platinum_ore": "Platinum Ore",
 
-    "item.sef_ores.platinum_block": "Platinum Block",
+"item.sef_ores.raw_platinum": "Raw Platinum",
 
-    "item.sef_ores.platinum_dust": "Platinum Dust",
+"item.sef_ores.platinum_ingot": "Platinum Ingot",
 
-    "text.autoconfig.sef_ores.option.platinum": "Generate Platinum",
+"item.sef_ores.platinum_nugget": "Platinum Nugget",
 
-    "text.autoconfig.sef_ores.option.platinum_vein_size": "Platinum Vein Size",
+"block.sef_ores.platinum_block": "Platinum Block",
 
-    "text.autoconfig.sef_ores.option.platinum_vein_frequency": "Platinum Vein Frequency",
+"item.sef_ores.platinum_block": "Platinum Block",
 
-    "text.autoconfig.sef_ores.option.platinum_min_y": "Platinum Min Y",
+"item.sef_ores.platinum_dust": "Platinum Dust",
 
-    "text.autoconfig.sef_ores.option.platinum_max_y": "Platinum Max Y",
+"text.autoconfig.sef_ores.option.platinum": "Generate Platinum",
 
-    "block.sef_ores.silver_ore": "Silver Ore",
+"text.autoconfig.sef_ores.option.platinum_vein_size": "Platinum Vein Size",
 
-    "item.sef_ores.silver_ore": "Silver Ore",
+"text.autoconfig.sef_ores.option.platinum_vein_frequency": "Platinum Vein Frequency",
 
-    "item.sef_ores.raw_silver": "Raw Silver",
+"text.autoconfig.sef_ores.option.platinum_min_y": "Platinum Min Y",
 
-    "item.sef_ores.silver_ingot": "Silver Ingot",
+"text.autoconfig.sef_ores.option.platinum_max_y": "Platinum Max Y",
 
-    "item.sef_ores.silver_nugget": "Silver Nugget",
+"block.sef_ores.silver_ore": "Silver Ore",
 
-    "block.sef_ores.silver_block": "Silver Block",
+"item.sef_ores.silver_ore": "Silver Ore",
 
-    "item.sef_ores.silver_block": "Silver Block",
+"item.sef_ores.raw_silver": "Raw Silver",
 
-    "item.sef_ores.silver_dust": "Silver Dust",
+"item.sef_ores.silver_ingot": "Silver Ingot",
 
-    "text.autoconfig.sef_ores.option.silver": "Generate Silver",
+"item.sef_ores.silver_nugget": "Silver Nugget",
 
-    "text.autoconfig.sef_ores.option.silver_vein_size": "Silver Vein Size",
+"block.sef_ores.silver_block": "Silver Block",
 
-    "text.autoconfig.sef_ores.option.silver_vein_frequency": "Silver Vein Frequency",
+"item.sef_ores.silver_block": "Silver Block",
 
-    "text.autoconfig.sef_ores.option.silver_min_y": "Silver Min Y",
+"item.sef_ores.silver_dust": "Silver Dust",
 
-    "text.autoconfig.sef_ores.option.silver_max_y": "Silver Max Y",
+"text.autoconfig.sef_ores.option.silver": "Generate Silver",
 
-    "block.sef_ores.tin_ore": "Tin Ore",
+"text.autoconfig.sef_ores.option.silver_vein_size": "Silver Vein Size",
 
-    "item.sef_ores.tin_ore": "Tin Ore",
+"text.autoconfig.sef_ores.option.silver_vein_frequency": "Silver Vein Frequency",
 
-    "item.sef_ores.raw_tin": "Raw Tin",
+"text.autoconfig.sef_ores.option.silver_min_y": "Silver Min Y",
 
-    "item.sef_ores.tin_ingot": "Tin Ingot",
+"text.autoconfig.sef_ores.option.silver_max_y": "Silver Max Y",
 
-    "item.sef_ores.tin_nugget": "Tin Nugget",
+"block.sef_ores.tin_ore": "Tin Ore",
 
-    "block.sef_ores.tin_block": "Tin Block",
+"item.sef_ores.tin_ore": "Tin Ore",
 
-    "item.sef_ores.tin_block": "Tin Block",
+"item.sef_ores.raw_tin": "Raw Tin",
 
-    "item.sef_ores.tin_dust": "Tin Dust",
+"item.sef_ores.tin_ingot": "Tin Ingot",
 
-    "text.autoconfig.sef_ores.option.tin": "Generate Tin",
+"item.sef_ores.tin_nugget": "Tin Nugget",
 
-    "text.autoconfig.sef_ores.option.tin_vein_size": "Tin Vein Size",
+"block.sef_ores.tin_block": "Tin Block",
 
-    "text.autoconfig.sef_ores.option.tin_vein_frequency": "Tin Vein Frequency",
+"item.sef_ores.tin_block": "Tin Block",
 
-    "text.autoconfig.sef_ores.option.tin_min_y": "Tin Min Y",
+"item.sef_ores.tin_dust": "Tin Dust",
 
-    "text.autoconfig.sef_ores.option.tin_max_y": "Tin Max Y",
+"text.autoconfig.sef_ores.option.tin": "Generate Tin",
 
-    "block.sef_ores.titanium_ore": "Titanium Ore",
+"text.autoconfig.sef_ores.option.tin_vein_size": "Tin Vein Size",
 
-    "item.sef_ores.titanium_ore": "Titanium Ore",
+"text.autoconfig.sef_ores.option.tin_vein_frequency": "Tin Vein Frequency",
 
-    "item.sef_ores.raw_titanium": "Raw Titanium",
+"text.autoconfig.sef_ores.option.tin_min_y": "Tin Min Y",
 
-    "item.sef_ores.titanium_ingot": "Titanium Ingot",
+"text.autoconfig.sef_ores.option.tin_max_y": "Tin Max Y",
 
-    "item.sef_ores.titanium_nugget": "Titanium Nugget",
+"block.sef_ores.titanium_ore": "Titanium Ore",
 
-    "block.sef_ores.titanium_block": "Titanium Block",
+"item.sef_ores.titanium_ore": "Titanium Ore",
 
-    "item.sef_ores.titanium_block": "Titanium Block",
+"item.sef_ores.raw_titanium": "Raw Titanium",
 
-    "item.sef_ores.titanium_dust": "Titanium Dust",
+"item.sef_ores.titanium_ingot": "Titanium Ingot",
 
-    "text.autoconfig.sef_ores.option.titanium": "Generate Titanium",
+"item.sef_ores.titanium_nugget": "Titanium Nugget",
 
-    "text.autoconfig.sef_ores.option.titanium_vein_size": "Titanium Vein Size",
+"block.sef_ores.titanium_block": "Titanium Block",
 
-    "text.autoconfig.sef_ores.option.titanium_vein_frequency": "Titanium Vein Frequency",
+"item.sef_ores.titanium_block": "Titanium Block",
 
-    "text.autoconfig.sef_ores.option.titanium_min_y": "Titanium Min Y",
+"item.sef_ores.titanium_dust": "Titanium Dust",
 
-    "text.autoconfig.sef_ores.option.titanium_max_y": "Titanium Max Y",
+"text.autoconfig.sef_ores.option.titanium": "Generate Titanium",
 
-    "block.sef_ores.tungsten_ore": "Tungsten Ore",
+"text.autoconfig.sef_ores.option.titanium_vein_size": "Titanium Vein Size",
 
-    "item.sef_ores.tungsten_ore": "Tungsten Ore",
+"text.autoconfig.sef_ores.option.titanium_vein_frequency": "Titanium Vein Frequency",
 
-    "item.sef_ores.raw_tungsten": "Raw Tungsten",
+"text.autoconfig.sef_ores.option.titanium_min_y": "Titanium Min Y",
 
-    "item.sef_ores.tungsten_ingot": "Tungsten Ingot",
+"text.autoconfig.sef_ores.option.titanium_max_y": "Titanium Max Y",
 
-    "item.sef_ores.tungsten_nugget": "Tungsten Nugget",
+"block.sef_ores.tungsten_ore": "Tungsten Ore",
 
-    "block.sef_ores.tungsten_block": "Tungsten Block",
+"item.sef_ores.tungsten_ore": "Tungsten Ore",
 
-    "item.sef_ores.tungsten_block": "Tungsten Block",
+"item.sef_ores.raw_tungsten": "Raw Tungsten",
 
-    "item.sef_ores.tungsten_dust": "Tungsten Dust",
+"item.sef_ores.tungsten_ingot": "Tungsten Ingot",
 
-    "text.autoconfig.sef_ores.option.tungsten": "Generate Tungsten",
+"item.sef_ores.tungsten_nugget": "Tungsten Nugget",
 
-    "text.autoconfig.sef_ores.option.tungsten_vein_size": "Tungsten Vein Size",
+"block.sef_ores.tungsten_block": "Tungsten Block",
 
-    "text.autoconfig.sef_ores.option.tungsten_vein_frequency": "Tungsten Vein Frequency",
+"item.sef_ores.tungsten_block": "Tungsten Block",
 
-    "text.autoconfig.sef_ores.option.tungsten_min_y": "Tungsten Min Y",
+"item.sef_ores.tungsten_dust": "Tungsten Dust",
 
-    "text.autoconfig.sef_ores.option.tungsten_max_y": "Tungsten Max Y",
+"text.autoconfig.sef_ores.option.tungsten": "Generate Tungsten",
 
-    "block.sef_ores.zinc_ore": "Zinc Ore",
+"text.autoconfig.sef_ores.option.tungsten_vein_size": "Tungsten Vein Size",
 
-    "item.sef_ores.zinc_ore": "Zinc Ore",
+"text.autoconfig.sef_ores.option.tungsten_vein_frequency": "Tungsten Vein Frequency",
 
-    "item.sef_ores.raw_zinc": "Raw Zinc",
+"text.autoconfig.sef_ores.option.tungsten_min_y": "Tungsten Min Y",
 
-    "item.sef_ores.zinc_ingot": "Zinc Ingot",
+"text.autoconfig.sef_ores.option.tungsten_max_y": "Tungsten Max Y",
 
-    "item.sef_ores.zinc_nugget": "Zinc Nugget",
+"block.sef_ores.zinc_ore": "Zinc Ore",
 
-    "block.sef_ores.zinc_block": "Zinc Block",
+"item.sef_ores.zinc_ore": "Zinc Ore",
 
-    "item.sef_ores.zinc_block": "Zinc Block",
+"item.sef_ores.raw_zinc": "Raw Zinc",
 
-    "item.sef_ores.zinc_dust": "Zinc Dust",
+"item.sef_ores.zinc_ingot": "Zinc Ingot",
 
-    "text.autoconfig.sef_ores.option.zinc": "Generate Zinc",
+"item.sef_ores.zinc_nugget": "Zinc Nugget",
 
-    "text.autoconfig.sef_ores.option.zinc_vein_size": "Zinc Vein Size",
+"block.sef_ores.zinc_block": "Zinc Block",
 
-    "text.autoconfig.sef_ores.option.zinc_vein_frequency": "Zinc Vein Frequency",
+"item.sef_ores.zinc_block": "Zinc Block",
 
-    "text.autoconfig.sef_ores.option.zinc_min_y": "Zinc Min Y",
+"item.sef_ores.zinc_dust": "Zinc Dust",
 
-    "text.autoconfig.sef_ores.option.zinc_max_y": "Zinc Max Y",
+"text.autoconfig.sef_ores.option.zinc": "Generate Zinc",
 
-    "item.sef_ores.brass_ingot": "Brass Ingot",
+"text.autoconfig.sef_ores.option.zinc_vein_size": "Zinc Vein Size",
 
-    "item.sef_ores.brass_nugget": "Brass Nugget",
+"text.autoconfig.sef_ores.option.zinc_vein_frequency": "Zinc Vein Frequency",
 
-    "block.sef_ores.brass_block": "Brass Block",
+"text.autoconfig.sef_ores.option.zinc_min_y": "Zinc Min Y",
 
-    "item.sef_ores.brass_block": "Brass Block",
+"text.autoconfig.sef_ores.option.zinc_max_y": "Zinc Max Y",
 
-    "item.sef_ores.brass_dust": "Brass Dust",
+"item.sef_ores.brass_ingot": "Brass Ingot",
 
-    "item.sef_ores.bronze_ingot": "Bronze Ingot",
+"item.sef_ores.brass_nugget": "Brass Nugget",
 
-    "item.sef_ores.bronze_nugget": "Bronze Nugget",
+"block.sef_ores.brass_block": "Brass Block",
 
-    "block.sef_ores.bronze_block": "Bronze Block",
+"item.sef_ores.brass_block": "Brass Block",
 
-    "item.sef_ores.bronze_block": "Bronze Block",
+"item.sef_ores.brass_dust": "Brass Dust",
 
-    "item.sef_ores.bronze_dust": "Bronze Dust",
+"item.sef_ores.bronze_ingot": "Bronze Ingot",
 
-    "item.sef_ores.electrum_ingot": "Electrum Ingot",
+"item.sef_ores.bronze_nugget": "Bronze Nugget",
 
-    "item.sef_ores.electrum_nugget": "Electrum Nugget",
+"block.sef_ores.bronze_block": "Bronze Block",
 
-    "block.sef_ores.electrum_block": "Electrum Block",
+"item.sef_ores.bronze_block": "Bronze Block",
 
-    "item.sef_ores.electrum_block": "Electrum Block",
+"item.sef_ores.bronze_dust": "Bronze Dust",
 
-    "item.sef_ores.electrum_dust": "Electrum Dust",
+"item.sef_ores.electrum_ingot": "Electrum Ingot",
 
-    "item.sef_ores.invar_ingot": "Invar Ingot",
+"item.sef_ores.electrum_nugget": "Electrum Nugget",
 
-    "item.sef_ores.invar_nugget": "Invar Nugget",
+"block.sef_ores.electrum_block": "Electrum Block",
 
-    "block.sef_ores.invar_block": "Invar Block",
+"item.sef_ores.electrum_block": "Electrum Block",
 
-    "item.sef_ores.invar_block": "Invar Block",
+"item.sef_ores.electrum_dust": "Electrum Dust",
 
-    "item.sef_ores.invar_dust": "Invar Dust",
+"item.sef_ores.invar_ingot": "Invar Ingot",
 
-    "item.sef_ores.steel_ingot": "Steel Ingot",
+"item.sef_ores.invar_nugget": "Invar Nugget",
 
-    "item.sef_ores.steel_nugget": "Steel Nugget",
+"block.sef_ores.invar_block": "Invar Block",
 
-    "block.sef_ores.steel_block": "Steel Block",
+"item.sef_ores.invar_block": "Invar Block",
 
-    "item.sef_ores.steel_block": "Steel Block",
+"item.sef_ores.invar_dust": "Invar Dust",
 
-    "item.sef_ores.steel_dust": "Steel Dust"
+"item.sef_ores.steel_ingot": "Steel Ingot",
+
+"item.sef_ores.steel_nugget": "Steel Nugget",
+
+"block.sef_ores.steel_block": "Steel Block",
+
+"item.sef_ores.steel_block": "Steel Block",
+
+"item.sef_ores.steel_dust": "Steel Dust"
 }

@@ -1,4 +1,5 @@
 var fs = require('fs');
+const VANILLA = ["iron", "gold", "copper"];
 const ORES = ["aluminum", "chromium", "iridium", "lead", "nickel", "platinum", "silver", "tin", "titanium", "tungsten", "zinc"];
 const ALLOYS = ["brass", "bronze", "electrum", "invar", "steel"];
 
@@ -156,6 +157,13 @@ function genModel(material, type) {
     }
 }
 
+function genModelVanilla(material, type) {
+    fs.writeFile(MODEL_PATH + "item/" + material + "_" + type + ".json", itemModelJson(material, type), function(err) {
+        if (err) throw err;
+        console.log("Item model created: " + material + "_" + type);
+    });
+}
+
 function genModels(material, alloy = false) {
     if (!alloy) {
         genModel(material, "ore");
@@ -164,6 +172,11 @@ function genModels(material, alloy = false) {
     genModel(material, "ingot");
     genModel(material, "nugget");
     genModel(material, "block");
+    genModel(material, "dust");
+}
+
+function genModelsVanilla(material) {
+    if (material != "gold" && material != "iron") genModel(material, "nugget");
     genModel(material, "dust");
 }
 
@@ -196,6 +209,13 @@ function genTag(material, type) {
     }
 }
 
+function genTagVanilla(material, type) {
+    fs.writeFile(TAG_PATH + material + "_" + type + "s.json", tagJson(material, type), function(err) {
+        if (err) throw err;
+        console.log("Tag created: " + material + "_" + type + "s");
+    });
+}
+
 function genTags(material, alloy = false) {
     if (!alloy) {
         genTag(material, "ore");
@@ -204,6 +224,11 @@ function genTags(material, alloy = false) {
     genTag(material, "ingot");
     genTag(material, "nugget");
     genTag(material, "block");
+    genTag(material, "dust");
+}
+
+function genTagsVanilla(material) {
+    if (material != "gold" && material != "iron") genTag(material, "nugget");
     genTag(material, "dust");
 }
 
@@ -226,6 +251,16 @@ function genLang(material, type) {
         if (!json.hasOwnProperty("item.sef_ores." + material + "_" + type)) {
             json["item.sef_ores." + material + "_" + type] = capitalize(material) + " " + capitalize(type);
         }
+    }
+    let data = JSON.stringify(json, null, "\n");
+    fs.writeFileSync(LANG_PATH, data);
+}
+
+function genLangVanilla(material, type) {
+    let raw = fs.readFileSync(LANG_PATH);
+    let json = JSON.parse(raw);
+    if (!json.hasOwnProperty("item.sef_ores." + material + "_" + type)) {
+        json["item.sef_ores." + material + "_" + type] = capitalize(material) + " " + capitalize(type);
     }
     let data = JSON.stringify(json, null, "\n");
     fs.writeFileSync(LANG_PATH, data);
@@ -265,6 +300,17 @@ function genLangs(material, alloy = false) {
     if (!alloy) genGenerationLangs(material);
 }
 
+function genLangsVanilla(material) {
+    if (material != "gold" && material != "iron") genLang(material, "nugget");
+    genLang(material, "dust");
+}
+
+function genVanillaResource(material) {
+    genModelsVanilla(material);
+    genTagsVanilla(material);
+    genLangsVanilla(material);
+}
+
 // Generate a specific material
 function genResource(material, alloy = false) {
     genBlockstates(material, alloy);
@@ -276,6 +322,9 @@ function genResource(material, alloy = false) {
 
 // Generate all materials
 function genAll() {
+    VANILLA.forEach(e => {
+        genVanillaResource(e);
+    });
     ORES.forEach(e => {
         genResource(e, false)
     });
