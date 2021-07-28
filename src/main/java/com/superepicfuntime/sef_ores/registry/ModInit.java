@@ -6,6 +6,8 @@ import com.superepicfuntime.sef_ores.util.RecipeBuilder;
 import java.util.AbstractMap;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import com.superepicfuntime.sef_ores.SEFOres;
 import com.google.gson.*;
 
@@ -209,31 +211,14 @@ public class ModInit {
 	public static void init() {
 		initOres();
 		initWorldGen();
+		
 		item("iron_dust", IRON_DUST);
 		item("gold_dust", GOLD_DUST);
 		item("copper_dust", COPPER_DUST);
 		item("copper_nugget", COPPER_NUGGET);
 
-		ArrayList<Character> keys = new ArrayList<Character>();
-		ArrayList<Identifier> items = new ArrayList<Identifier>();
-		ArrayList<String> type = new ArrayList<String>();
-		ArrayList<String> pattern = new ArrayList<String>();
-		
-		keys.add('X');
-		items.add(new Identifier("c", "copper_nuggets"));
-		type.add("tag");
-		pattern.add("XXX");
-		pattern.add("XXX");
-		pattern.add("XXX");
-
-		RECIPES.add(RecipeBuilder.createShaped(keys, items, type, pattern, new Identifier(ModInit.MOD_ID+":copper_ingot"), 1));
-
-		ArrayList<Identifier> items = new ArrayList<Identifier>();
-		ArrayList<String> type = new ArrayList<String>();
-		items.add(new Identifier("c", "copper_ingot"));
-		type.add("tag");
-
-		RECIPES.add(RecipeBuilder.createShapeless(items, type, new Identifier(ModInit.MOD_ID+":"+id+"_ingot"), 9));
+		RECIPES.add(RecipeBuilder.createShaped(new ArrayList<Character>(Arrays.asList('X')), new ArrayList<Identifier>(Arrays.asList(new Identifier("c", "copper_nuggets"))), new ArrayList<String>(Arrays.asList("tag")), new ArrayList<String>(Arrays.asList("XXX", "XXX", "XXX")), new Identifier(ModInit.MOD_ID+":copper_ingot"), 1));
+		RECIPES.add(RecipeBuilder.createShapeless(new ArrayList<Identifier>(Arrays.asList(new Identifier("c", "copper_ingot"))), new ArrayList<String>(Arrays.asList("tag")), new Identifier(ModInit.MOD_ID+":copper_nugget"), 9));
 
 		if (SEFOres.CONFIG.conversion_manual) {
 			item("conversion_manual", CONVERSION_MANUAL);
