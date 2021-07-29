@@ -1,5 +1,5 @@
 var fs = require('fs');
-const ORES = ["aluminum", "chromium", "iridium", "lead", "nickel", "platinum", "silver", "tin", "titanium", "tungsten", "zinc"];
+const ORES = ["aluminum", "chromium", "iridium", "lead", "nickel", "platinum", "silver", "tin", "titanium", "tungsten", "uranium", "zinc"];
 
 // order must match ORES
 const DEFAULTS = [
@@ -13,6 +13,7 @@ const DEFAULTS = [
     [8, 8, 0, 96], //tin
     [3, 2, 0, 20], //titanium
     [4, 2, 0, 16], //tungsten
+    [3, 4, 0, 24], //uranium
     [12, 8, 0, 70] //zinc
 ];
 

@@ -54,16 +54,25 @@ public class ModInit {
 		new AbstractMap.SimpleEntry<String, Material>(	"tin", 		new Material("tin", 		2.0f, 		1, 		true)),
 		new AbstractMap.SimpleEntry<String, Material>(	"titanium", new Material("titanium", 	10.0f, 		3, 		true)),
 		new AbstractMap.SimpleEntry<String, Material>(	"tungsten", new Material("tungsten", 	9.0f, 		3, 		true)),
+		new AbstractMap.SimpleEntry<String, Material>(	"uranium", 	new Material("uranium", 	6.5f, 		2, 		true)),
 		new AbstractMap.SimpleEntry<String, Material>(	"zinc", 	new Material("zinc", 		2.0f, 		2, 		true))
 	);
 
 	public static final ArrayList<JsonObject> RECIPES = new ArrayList<JsonObject>();
 
 	// == Worldgen ==
+	// Chromium
+	private static ConfiguredFeature<?, ?> ORE_CHROMIUM_OVERWORLD = Feature.ORE
+	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("chromium").ORE.getDefaultState(), SEFOres.CONFIG.chromium_vein_size))
+	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.chromium_min_y), YOffset.fixed(SEFOres.CONFIG.chromium_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.chromium_vein_frequency);
 	// Aluminum
 	private static ConfiguredFeature<?, ?> ORE_ALUMINUM_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("aluminum").ORE.getDefaultState(), SEFOres.CONFIG.aluminum_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.aluminum_min_y), YOffset.fixed(SEFOres.CONFIG.aluminum_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.aluminum_vein_frequency);
+	// Platinum
+	private static ConfiguredFeature<?, ?> ORE_PLATINUM_OVERWORLD = Feature.ORE
+	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("platinum").ORE.getDefaultState(), SEFOres.CONFIG.platinum_vein_size))
+	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.platinum_min_y), YOffset.fixed(SEFOres.CONFIG.platinum_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.platinum_vein_frequency);
 	// Iridium
 	private static ConfiguredFeature<?, ?> ORE_IRIDIUM_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("iridium").ORE.getDefaultState(), SEFOres.CONFIG.iridium_vein_size))
@@ -72,38 +81,34 @@ public class ModInit {
 	private static ConfiguredFeature<?, ?> ORE_NICKEL_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("nickel").ORE.getDefaultState(), SEFOres.CONFIG.nickel_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.nickel_min_y), YOffset.fixed(SEFOres.CONFIG.nickel_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.nickel_vein_frequency);
-	// Platinum
-	private static ConfiguredFeature<?, ?> ORE_PLATINUM_OVERWORLD = Feature.ORE
-	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("platinum").ORE.getDefaultState(), SEFOres.CONFIG.platinum_vein_size))
-	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.platinum_min_y), YOffset.fixed(SEFOres.CONFIG.platinum_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.platinum_vein_frequency);
 	// Lead
 	private static ConfiguredFeature<?, ?> ORE_LEAD_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("lead").ORE.getDefaultState(), SEFOres.CONFIG.lead_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.lead_min_y), YOffset.fixed(SEFOres.CONFIG.lead_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.lead_vein_frequency);
-	// Silver
-	private static ConfiguredFeature<?, ?> ORE_SILVER_OVERWORLD = Feature.ORE
-	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("silver").ORE.getDefaultState(), SEFOres.CONFIG.silver_vein_size))
-	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.silver_min_y), YOffset.fixed(SEFOres.CONFIG.silver_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.silver_vein_frequency);
 	// Tin
 	private static ConfiguredFeature<?, ?> ORE_TIN_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("tin").ORE.getDefaultState(), SEFOres.CONFIG.tin_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.tin_min_y), YOffset.fixed(SEFOres.CONFIG.tin_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.tin_vein_frequency);
-	// Chromium
-	private static ConfiguredFeature<?, ?> ORE_CHROMIUM_OVERWORLD = Feature.ORE
-	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("chromium").ORE.getDefaultState(), SEFOres.CONFIG.chromium_vein_size))
-	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.chromium_min_y), YOffset.fixed(SEFOres.CONFIG.chromium_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.chromium_vein_frequency);
-	// Zinc
-	private static ConfiguredFeature<?, ?> ORE_ZINC_OVERWORLD = Feature.ORE
-	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("zinc").ORE.getDefaultState(), SEFOres.CONFIG.zinc_vein_size))
-	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.zinc_min_y), YOffset.fixed(SEFOres.CONFIG.zinc_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.zinc_vein_frequency);
 	// Titanium
 	private static ConfiguredFeature<?, ?> ORE_TITANIUM_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("titanium").ORE.getDefaultState(), SEFOres.CONFIG.titanium_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.titanium_min_y), YOffset.fixed(SEFOres.CONFIG.titanium_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.titanium_vein_frequency);
+	// Uranium
+	private static ConfiguredFeature<?, ?> ORE_URANIUM_OVERWORLD = Feature.ORE
+	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("uranium").ORE.getDefaultState(), SEFOres.CONFIG.uranium_vein_size))
+	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.uranium_min_y), YOffset.fixed(SEFOres.CONFIG.uranium_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.uranium_vein_frequency);
 	// Tungsten
 	private static ConfiguredFeature<?, ?> ORE_TUNGSTEN_OVERWORLD = Feature.ORE
 	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("tungsten").ORE.getDefaultState(), SEFOres.CONFIG.tungsten_vein_size))
 	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.tungsten_min_y), YOffset.fixed(SEFOres.CONFIG.tungsten_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.tungsten_vein_frequency);
+	// Zinc
+	private static ConfiguredFeature<?, ?> ORE_ZINC_OVERWORLD = Feature.ORE
+	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("zinc").ORE.getDefaultState(), SEFOres.CONFIG.zinc_vein_size))
+	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.zinc_min_y), YOffset.fixed(SEFOres.CONFIG.zinc_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.zinc_vein_frequency);
+	// Silver
+	private static ConfiguredFeature<?, ?> ORE_SILVER_OVERWORLD = Feature.ORE
+	.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, MATERIALS.get("silver").ORE.getDefaultState(), SEFOres.CONFIG.silver_vein_size))
+	.range(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.aboveBottom(SEFOres.CONFIG.silver_min_y), YOffset.fixed(SEFOres.CONFIG.silver_max_y)))).spreadHorizontally().repeat(SEFOres.CONFIG.silver_vein_frequency);
 
 	// == Register functions ==
 	// Register template
@@ -136,17 +141,29 @@ public class ModInit {
 
 	@SuppressWarnings("deprecation")
 	public static void initWorldGen() {
+		if (SEFOres.CONFIG.chromium) {
+			RegistryKey<ConfiguredFeature<?, ?>> oreChromiumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+			new Identifier(MOD_ID, "ore_chromium_overworld"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreChromiumOverworld.getValue(), ORE_CHROMIUM_OVERWORLD);
+			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreChromiumOverworld);
+		}
 		if (SEFOres.CONFIG.aluminum) {
 			RegistryKey<ConfiguredFeature<?, ?>> oreAluminumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 			new Identifier(MOD_ID, "ore_aluminum_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreAluminumOverworld.getValue(), ORE_ALUMINUM_OVERWORLD);
 			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreAluminumOverworld);
 		}
-		if (SEFOres.CONFIG.chromium) {
-			RegistryKey<ConfiguredFeature<?, ?>> oreChromiumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-			new Identifier(MOD_ID, "ore_chromium_overworld"));
-			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreChromiumOverworld.getValue(), ORE_CHROMIUM_OVERWORLD);
-			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreChromiumOverworld);
+		if (SEFOres.CONFIG.silver) {
+			RegistryKey<ConfiguredFeature<?, ?>> oreSilverOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+			new Identifier(MOD_ID, "ore_silver_overworld"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverOverworld.getValue(), ORE_SILVER_OVERWORLD);
+			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverOverworld);
+		}
+		if (SEFOres.CONFIG.iridium) {
+			RegistryKey<ConfiguredFeature<?, ?>> oreIridiumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+			new Identifier(MOD_ID, "ore_iridium_overworld"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreIridiumOverworld.getValue(), ORE_IRIDIUM_OVERWORLD);
+			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreIridiumOverworld);
 		}
 		if (SEFOres.CONFIG.lead) {
 			RegistryKey<ConfiguredFeature<?, ?>> oreLeadOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -160,11 +177,11 @@ public class ModInit {
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePlatinumOverworld.getValue(), ORE_PLATINUM_OVERWORLD);
 			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, orePlatinumOverworld);
 		}
-		if (SEFOres.CONFIG.iridium) {
-			RegistryKey<ConfiguredFeature<?, ?>> oreIridiumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-			new Identifier(MOD_ID, "ore_iridium_overworld"));
-			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreIridiumOverworld.getValue(), ORE_IRIDIUM_OVERWORLD);
-			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreIridiumOverworld);
+		if (SEFOres.CONFIG.tin) {
+			RegistryKey<ConfiguredFeature<?, ?>> oreTinOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+			new Identifier(MOD_ID, "ore_tin_overworld"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinOverworld.getValue(), ORE_TIN_OVERWORLD);
+			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinOverworld);
 		}
 		if (SEFOres.CONFIG.nickel) {
 			RegistryKey<ConfiguredFeature<?, ?>> oreNickelOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
@@ -184,23 +201,17 @@ public class ModInit {
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTungstenOverworld.getValue(), ORE_TUNGSTEN_OVERWORLD);
 			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTungstenOverworld);
 		}
-		if (SEFOres.CONFIG.silver) {
-			RegistryKey<ConfiguredFeature<?, ?>> oreSilverOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-			new Identifier(MOD_ID, "ore_silver_overworld"));
-			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreSilverOverworld.getValue(), ORE_SILVER_OVERWORLD);
-			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreSilverOverworld);
-		}
-		if (SEFOres.CONFIG.tin) {
-			RegistryKey<ConfiguredFeature<?, ?>> oreTinOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
-			new Identifier(MOD_ID, "ore_tin_overworld"));
-			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreTinOverworld.getValue(), ORE_TIN_OVERWORLD);
-			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreTinOverworld);
-		}
 		if (SEFOres.CONFIG.zinc) {
 			RegistryKey<ConfiguredFeature<?, ?>> oreZincOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
 			new Identifier(MOD_ID, "ore_zinc_overworld"));
 			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreZincOverworld.getValue(), ORE_ZINC_OVERWORLD);
 			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreZincOverworld);
+		}
+		if (SEFOres.CONFIG.uranium) {
+			RegistryKey<ConfiguredFeature<?, ?>> oreUraniumOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
+			new Identifier(MOD_ID, "ore_uranium_overworld"));
+			Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, oreUraniumOverworld.getValue(), ORE_URANIUM_OVERWORLD);
+			BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, oreUraniumOverworld);
 		}
 	}
 

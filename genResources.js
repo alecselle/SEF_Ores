@@ -1,6 +1,6 @@
 var fs = require('fs');
 const VANILLA = ["iron", "gold", "copper"];
-const ORES = ["aluminum", "chromium", "iridium", "lead", "nickel", "platinum", "silver", "tin", "titanium", "tungsten", "zinc"];
+const ORES = ["aluminum", "chromium", "iridium", "lead", "nickel", "platinum", "silver", "tin", "titanium", "tungsten", "uranium", "zinc"];
 const ALLOYS = ["brass", "bronze", "electrum", "invar", "steel"];
 
 const BLOCKSTATE_PATH = "./src/main/resources/assets/sef_ores/blockstates/";

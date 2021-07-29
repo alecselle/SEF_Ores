@@ -360,5 +360,31 @@
 
 "item.sef_ores.steel_block": "Steel Block",
 
-"item.sef_ores.steel_dust": "Steel Dust"
+"item.sef_ores.steel_dust": "Steel Dust",
+
+"block.sef_ores.uranium_ore": "Uranium Ore",
+
+"item.sef_ores.uranium_ore": "Uranium Ore",
+
+"item.sef_ores.raw_uranium": "Raw Uranium",
+
+"item.sef_ores.uranium_ingot": "Uranium Ingot",
+
+"item.sef_ores.uranium_nugget": "Uranium Nugget",
+
+"block.sef_ores.uranium_block": "Uranium Block",
+
+"item.sef_ores.uranium_block": "Uranium Block",
+
+"item.sef_ores.uranium_dust": "Uranium Dust",
+
+"text.autoconfig.sef_ores.option.uranium": "Generate Uranium",
+
+"text.autoconfig.sef_ores.option.uranium_vein_size": "Uranium Vein Size",
+
+"text.autoconfig.sef_ores.option.uranium_vein_frequency": "Uranium Vein Frequency",
+
+"text.autoconfig.sef_ores.option.uranium_min_y": "Uranium Min Y",
+
+"text.autoconfig.sef_ores.option.uranium_max_y": "Uranium Max Y"
 }
