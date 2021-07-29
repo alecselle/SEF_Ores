@@ -217,8 +217,8 @@ public class ModInit {
 		item("copper_dust", COPPER_DUST);
 		item("copper_nugget", COPPER_NUGGET);
 
-		RECIPES.add(RecipeBuilder.createShaped(new ArrayList<Character>(Arrays.asList('X')), new ArrayList<Identifier>(Arrays.asList(new Identifier("minecraft", "copper_nuggets"))), new ArrayList<String>(Arrays.asList("item")), new ArrayList<String>(Arrays.asList("XXX", "XXX", "XXX")), new Identifier("minecraft", "copper_ingot"), 1));
-		RECIPES.add(RecipeBuilder.createShapeless(new ArrayList<Identifier>(Arrays.asList(new Identifier("c", "copper_ingot"))), new ArrayList<String>(Arrays.asList("tag")), new Identifier(ModInit.MOD_ID+":copper_nugget"), 9));
+		RECIPES.add(RecipeBuilder.createShaped(new ArrayList<Character>(Arrays.asList('X')), new ArrayList<Identifier>(Arrays.asList(new Identifier("c", "copper_nuggets"))), new ArrayList<String>(Arrays.asList("tag")), new ArrayList<String>(Arrays.asList("XXX", "XXX", "XXX")), new Identifier("minecraft", "copper_ingot"), 1));
+		RECIPES.add(RecipeBuilder.createShapeless(new ArrayList<Identifier>(Arrays.asList(new Identifier("minecraft", "copper_ingot"))), new ArrayList<String>(Arrays.asList("item")), new Identifier(ModInit.MOD_ID+":copper_nugget"), 9));
 
 		if (SEFOres.CONFIG.conversion_manual) {
 			item("conversion_manual", CONVERSION_MANUAL);
